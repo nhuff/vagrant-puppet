@@ -1,0 +1,3 @@
+[submodule "modules/inifile"]
+	path = modules/inifile
+	url = git://github.com/cprice-puppet/puppetlabs-inifile.git
