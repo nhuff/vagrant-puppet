@@ -7,4 +7,5 @@ rpm -q puppet
 if [ $? != 0 ]; then 
   yum -y install puppet
 fi
+service iptables status && service iptables stop
 puppet apply --debug --verbose --modulepath=/vagrant/modules /vagrant/puppet-up.pp

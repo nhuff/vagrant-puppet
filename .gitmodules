@@ -1,3 +1,6 @@
 [submodule "modules/inifile"]
 	path = modules/inifile
 	url = git://github.com/cprice-puppet/puppetlabs-inifile.git
+[submodule ".\\modules\\apache"]
+	path = .\\modules\\apache
+	url = gitolite@nrhtest.ahc.umn.edu:puppet-apache

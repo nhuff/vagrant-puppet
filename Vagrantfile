@@ -11,6 +11,7 @@ Vagrant::Config.run do |config|
   end
   config.vm.define :client do |client|
     client.vm.network :hostonly, '192.168.234.11'
+    client.vm.provision :shell, :path => "puppet-client.sh"
     client.vm.host_name = 'client.vm'
   end
 end

@@ -1,3 +1,7 @@
 node default {
-  include puppet::server
+  puppet::server::instance{'master1':
+    configdir => '/etc/puppet/master1',
+    manifestdir => '/vagrant/manifests',
+    modulepath => '/vagrant/modules',
+  }
 }
