@@ -4,3 +4,9 @@
 [submodule ".\\modules\\apache"]
 	path = .\\modules\\apache
 	url = gitolite@nrhtest.ahc.umn.edu:puppet-apache
+[submodule ".\\modules\\unicorn"]
+	path = .\\modules\\unicorn
+	url = git@github.com:nhuff/puppet-unicorn.git
+[submodule ".\\modules\\stdlib"]
+	path = .\\modules\\stdlib
+	url = git://github.com/puppetlabs/puppetlabs-stdlib.git
