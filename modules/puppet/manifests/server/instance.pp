@@ -73,8 +73,11 @@ define puppet::server::instance (
     setting => 'modulepath',
     value   => $r_modulepath,
   }
-  exec{'puppetmaster':
-    command => "/usr/bin/puppet master --confdir=${configdir}",
-    unless  => '/usr/bin/pgrep -u puppet puppet',
+  file{"${configdir}/config.ru":
+    ensure  => 'file',
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0644',
+    content => template('puppet/config.ru.erb'),
   }
 }
