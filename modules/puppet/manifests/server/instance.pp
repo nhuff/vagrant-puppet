@@ -35,6 +35,13 @@ define puppet::server::instance (
     group  => 'root',
     mode   => '0755',
   }
+  file{"${configdir}/auth.conf":
+    ensure => 'file',
+    owner  => 'root',
+    group  => 'root',
+    mode   => '0644',
+    source => 'puppet:///modules/puppet/auth.conf',
+  }
   Ini_setting{
     path    => "${configdir}/puppet.conf",
     section => 'master',
